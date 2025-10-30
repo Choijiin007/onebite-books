@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    gap: 15px;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+
+    color: black;
+    text-decoration: none;
+}
+
+.container img {
+    width: 80px;
+}
+.title{
+    font-weight: bold;
+}
+.subtitle{
+    word-break: keep-all; 
+    /* 한 줄을 넘어가도 보기 좋게 넘어갈 수 있도록 */
+}
+.author{
+    color: gray;
+}
