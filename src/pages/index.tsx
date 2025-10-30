@@ -2,7 +2,7 @@
 import { ReactNode } from "react"
 import style from "./index.module.css"
 import SearchableLayout from "@/components/searchable-layout"
-import books from "@/components/mock/books.json"
+import books from "@/mock/books.json"
 import BookItem from "@/components/book-item"
 export default function Home() {
   return (
