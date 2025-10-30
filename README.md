@@ -1,3 +1,10 @@
+한입북스 클론 코딩
+기술 스택 : HTMl, CSS, JavaScript, Next.js, TypeScript
+
+/page
+- getLayout을 활용한 서치바 이동
+- map()을 활용한 도서 목록 나열
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
