@@ -4,7 +4,23 @@ import style from "./index.module.css"
 import SearchableLayout from "@/components/searchable-layout"
 import books from "@/mock/books.json"
 import BookItem from "@/components/book-item"
-export default function Home() {
+import fetchBooks from "@/lib/fetch-books"
+
+//SSR로 내보내는 방법
+export const getServerSideProps = async() => {
+  //컴포넌트 보다 먼저 실행되어서, 컴포넌트에 필요한 데이터를 불러오는 함수
+//  console.log('난 서버사이드프롭스로 서버에서만 상주하지, 브라우저 콘솔에선 볼 수 없음')
+const allBooks = await fetchBooks();
+  
+  return{
+    props:{
+      allBooks,
+    },
+};
+};
+
+export default function Home({allBooks,}:InferGetServerSidePropsType<typeof getServerSideProps>) {
+console.log(allBooks);
   return (
    <div className={style.container}>
     <section>
@@ -13,7 +29,7 @@ export default function Home() {
     </section>
     <section>
       <h3>등록된 모든 도서</h3>
-      {books.map((book)=><BookItem key={book.id} {...book}/>)}
+      {allBooks.map((book)=><BookItem key={book.id} {...book}/>)}
     </section>
    </div>
     
