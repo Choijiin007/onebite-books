@@ -1,4 +1,3 @@
-import { time } from "console";
 import { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(
